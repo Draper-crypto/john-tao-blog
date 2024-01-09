@@ -13,7 +13,6 @@ const WEB_SITE = `https://${DOMAIN_NAME}` // 网址
 
 export default defineConfig4CustomTheme<VdoingThemeConfig>({
   theme: 'vdoing', // 使用npm主题包
-  // theme: resolve(__dirname, '../../vdoing'), // 使用本地主题包
 
   locales: {
     '/': {
@@ -45,25 +44,6 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
           //   items: [
           //     { text: '《JavaScript教程》', link: '/note/javascript/' },
           //     { text: '《JavaScript高级程序设计》', link: '/note/js/' },
-          //     { text: '《ES6 教程》', link: '/note/es6/' },
-          //     { text: '《Vue》', link: '/note/vue/' },
-          //     { text: '《React》', link: '/note/react/' },
-          //     {
-          //       text: '《TypeScript 从零实现 axios》',
-          //       link: '/note/typescript-axios/',
-          //     },
-          //     {
-          //       text: '《Git》',
-          //       link: '/note/git/',
-          //     },
-          //     {
-          //       text: 'TypeScript',
-          //       link: '/pages/51afd6/',
-          //     },
-          //     {
-          //       text: 'JS设计模式总结',
-          //       link: '/pages/4643cd/',
-          //     },
           //   ],
           // },
         // ],
@@ -71,34 +51,35 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
       {
         text: '书籍阅读',
         link: '/books/',
-        // items: [
-        //   { text: 'HTML', link: '/pages/8309a5b876fc95e3/' },
-        //   { text: 'CSS', link: '/pages/0a83b083bdf257cb/' },
-        // ],
       },
       {
         text: '信息技术',
         link: '/technology/',
-        // items: [
-        //   { text: '技术文档', link: '/pages/9a7ee40fc232253e/' },
-        //   { text: 'GitHub技巧', link: '/pages/4c778760be26d8b3/' },
-        //   { text: 'Nodejs', link: '/pages/117708e0af7f0bd9/' },
-        //   { text: '博客搭建', link: '/pages/41f87d890d0a02af/' },
-        // ],
+        items: [
+          { text: '技术文档', link: '/install/i0001/' },
+          { text: '使用教程', link: '/use/u0001/' },
+          { text: '报错解决', link: '/error/er0001/' },
+          // { text: '博客搭建', link: '/pages/41f87d890d0a02af/' },
+        ],
       },
       {
         text: '国际金融',
         link: '/finance/',
       },
-      { text: '关于', link: '/about/' },
+      {
+        text: '关于',
+        link: '/about/',
+        items: [
+          { text: '中文', link: '/zh/ab01/' },
+          { text: '英文', link: '/en/ab02/' },
+        ],
+      },
       {
         text: '收藏',
-        link: '/pages/beb6c0bd8a66cea6/',
-        // items: [
-        //   { text: '网站', link: '/pages/beb6c0bd8a66cea6/' },
-        //   { text: '资源', link: '/pages/eee83a9211a70f9d/' },
-        //   { text: 'Vue资源', link: '/pages/12df8ace52d493f6/' },
-        // ],
+        link: '/collection/wz0001/',
+        items: [
+          { text: 'AI工具集', link: '/collection/wz0001/' },
+        ],
       },
       {
         text: '索引',
@@ -112,7 +93,7 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
     ],
     sidebarDepth: 2, // 侧边栏显示深度，默认1，最大2（显示到h3标题）
     logo: '/img/logo.png', // 导航栏logo
-    repo: 'xugaoyi/vuepress-theme-vdoing', // 导航栏右侧生成Github链接
+    repo: 'Draper-crypto/john-tao-blog', // 导航栏右侧生成Github链接
     searchMaxSuggestions: 10, // 搜索结果显示最大数
     lastUpdated: '上次更新', // 开启更新时间，并配置前缀文字   string | boolean (取值为git提交时间)
     docsDir: 'docs', // 编辑的文件夹
@@ -143,13 +124,13 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
     // ],
     // contentBgStyle: 1, // 文章内容块的背景风格，默认无. 1 方格 | 2 横线 | 3 竖线 | 4 左斜线 | 5 右斜线 | 6 点状
 
-    // updateBar: { // 最近更新栏
-    //   showToArticle: true, // 显示到文章页底部，默认true
-    //   moreArticle: '/archives' // “更多文章”跳转的页面，默认'/archives'
-    // },
-    // rightMenuBar: false, // 是否显示右侧文章大纲栏，默认true (屏宽小于1300px下无论如何都不显示)
-    // sidebarOpen: false, // 初始状态是否打开左侧边栏，默认true
-    // pageButton: false, // 是否显示快捷翻页按钮，默认true
+    updateBar: { // 最近更新栏
+      showToArticle: true, // 显示到文章页底部，默认true
+      moreArticle: '/archives' // “更多文章”跳转的页面，默认'/archives'
+    },
+    rightMenuBar: true, // 是否显示右侧文章大纲栏，默认true (屏宽小于1300px下无论如何都不显示)
+    sidebarOpen: true, // 初始状态是否打开左侧边栏，默认true
+    pageButton: true, // 是否显示快捷翻页按钮，默认true
 
     // 默认外观模式（用户未在页面手动修改过模式时才生效，否则以用户设置的模式为准），可选：'auto' | 'light' | 'dark' | 'read'，默认'auto'。
     // defaultMode: 'auto',
@@ -196,7 +177,7 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
     footer: {
       createYear: 2019, // 博客创建年份
       copyrightInfo:
-        'John Tao | <a href="https://github.com/xugaoyi/vuepress-theme-vdoing/blob/master/LICENSE" target="_blank">MIT License</a>', // 博客版权信息、备案信息等，支持a标签或换行标签</br>
+        'John Tao | <a href="sz" target="_blank">MIT License</a>', // 博客版权信息、备案信息等，支持a标签或换行标签</br>
     },
 
     // 扩展自动生成frontmatter。（当md文件的frontmatter不存在相应的字段时将自动添加。不会覆盖已有的数据。）
