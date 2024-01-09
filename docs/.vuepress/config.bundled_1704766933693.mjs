@@ -213,11 +213,11 @@ var config_default = defineConfig4CustomTheme({
       {
         choosen: "gitalk",
         options: {
-          clientID: "a6e1355287947096b88b",
-          clientSecret: "f0e77d070fabfcd5af95bebb82b2d574d7248d71",
-          repo: "blog-gitalk-comment",
-          owner: "xugaoyi",
-          admin: ["xugaoyi"],
+          clientID: "a6cc501db75280f6ac66",
+          clientSecret: "bd9c0b585aa9abb1165dded60c8c2ef6d9c67aa4",
+          repo: "john-tao-blog",
+          owner: "Draper-crypto",
+          admin: ["Draper-crypto"],
           pagerDirection: "last",
           id: "<%- (frontmatter.permalink || frontmatter.to.path).slice(-16) %>",
           title: "\u300C\u8BC4\u8BBA\u300D<%- frontmatter.title %>",

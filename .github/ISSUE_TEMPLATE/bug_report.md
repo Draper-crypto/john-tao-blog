@@ -1,4 +1,4 @@
----
+--
 name: 报告bug
 about: 创建一个报告来帮助我们改进
 title: "[bug]: "
