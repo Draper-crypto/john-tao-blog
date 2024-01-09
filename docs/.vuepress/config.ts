@@ -5,7 +5,6 @@ import { resolve } from 'path'
 import { defineConfig4CustomTheme, UserPlugins } from 'vuepress/config'
 import { VdoingThemeConfig } from 'vuepress-theme-vdoing/types'
 import dayjs from 'dayjs'
-import baiduCode from './config/baiduCode' // 百度统计hm码
 import htmlModules from './config/htmlModules' // 自定义插入的html块
 
 const DOMAIN_NAME = 'www.draper-crypto.top' // 域名 (不带https)
@@ -59,7 +58,6 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
           { text: '技术文档', link: '/install/i0001/' },
           { text: '使用教程', link: '/use/u0001/' },
           { text: '报错解决', link: '/error/er0001/' },
-          // { text: '博客搭建', link: '/pages/41f87d890d0a02af/' },
         ],
       },
       {
@@ -80,6 +78,10 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
         items: [
           { text: 'AI工具集', link: '/collection/wz0001/' },
         ],
+      },
+      {
+        text: '友情链接',
+        link: '/link/lj0001/',
       },
       {
         text: '索引',
@@ -113,7 +115,7 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
     bodyBgImg: [
       'https://typora-img-1301299232.cos.ap-shanghai.myqcloud.com/img2/A.jpg',
     ], // body背景大图，默认无。 单张图片 String | 多张图片 Array, 多张图片时隔bodyBgImgInterval切换一张。
-    bodyBgImgOpacity: 0.5, // body背景图透明度，选值 0.1~1.0, 默认0.5
+    bodyBgImgOpacity: 0.1, // body背景图透明度，选值 0.1~1.0, 默认0.5
     // bodyBgImgInterval: 15, // body多张背景图时的切换间隔, 默认15，单位s
     // titleBadge: false, // 文章标题前的图标是否显示，默认true
     // titleBadgeIcons: [ // 文章标题前图标的地址，默认主题内置图标
@@ -175,7 +177,7 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
     footer: {
       createYear: 2019, // 博客创建年份
       copyrightInfo:
-        'John Tao | <a href="sz" target="_blank">MIT License</a>', // 博客版权信息、备案信息等，支持a标签或换行标签</br>
+        'John Tao | <a href="https://github.com/Draper-crypto/john-tao-blog/blob/master/LICENSE" target="_blank">MIT License</a>', // 博客版权信息、备案信息等，支持a标签或换行标签</br>
     },
 
     // 扩展自动生成frontmatter。（当md文件的frontmatter不存在相应的字段时将自动添加。不会覆盖已有的数据。）
@@ -197,19 +199,10 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
       'meta',
       {
         name: 'keywords',
-        content: '前端博客,个人技术博客,前端,前端开发,前端框架,web前端,前端面试题,技术文档,学习,面试,JavaScript,js,ES6,TypeScript,vue,python,css3,html5,Node,git,github,markdown',
+        content: 'Draper-crypto,Draper-crypto Blog,Draper-crypto的博客,John Tao,John Tao Blog,John Tao的博客,github,markdown',
       },
     ],
-    ['meta', { name: 'baidu-site-verification', content: '7F55weZDDc' }], // 百度统计的站长验证（你可以去掉）
     ['meta', { name: 'theme-color', content: '#11a8cd' }], // 移动浏览器主题颜色
-    // [
-    //   'script',
-    //   {
-    //     'data-ad-client': 'ca-pub-7828333725993554',
-    //     async: 'async',
-    //     src: 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js',
-    //   },
-    // ], // 网站关联Google AdSense 与 html格式广告支持（你可以去掉）
   ],
 
 
@@ -219,15 +212,6 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
       "sitemap", // 网站地图
       {
         hostname: WEB_SITE,
-      },
-    ],
-
-    'vuepress-plugin-baidu-autopush', // 百度自动推送
-
-    [
-      'vuepress-plugin-baidu-tongji', // 百度统计
-      {
-        hm: baiduCode,
       },
     ],
 

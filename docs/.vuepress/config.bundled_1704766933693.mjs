@@ -2,9 +2,6 @@
 import { defineConfig4CustomTheme } from "vuepress/config";
 import dayjs from "dayjs";
 
-// docs/.vuepress/config/baiduCode.ts
-var baiduCode_default = "503f098e7e5b3a5b5d8c5fc2938af002";
-
 // docs/.vuepress/config/htmlModules.ts
 var htmlModule = {};
 var htmlModules_default = htmlModule;
