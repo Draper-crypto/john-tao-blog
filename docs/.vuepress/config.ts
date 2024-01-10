@@ -59,7 +59,7 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
           { text: '使用教程', link: '/use/u0001/' },
           { text: '报错解决', link: '/error/er0001/' },
           { text: '代码编写', link: '/code/co0001/' },
-          { text: '人工智能', link: '/ai/aio0001/' },
+          { text: '人工智能', link: '/ai/ai0001/' },
         ],
       },
       {
@@ -68,17 +68,10 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
       },
       {
         text: '关于',
-        link: '/about/',
+        link: '/about/zh',
         items: [
-          { text: '中文', link: '/zh/ab01/' },
-          { text: '英文', link: '/en/ab02/' },
-        ],
-      },
-      {
-        text: '收藏',
-        link: '/collection/wz0001/',
-        items: [
-          { text: 'AI工具集', link: '/collection/wz0001/' },
+          { text: 'Chinese', link: '/about/zh/' },
+          { text: 'English', link: '/about/en/' },
         ],
       },
       {
@@ -101,7 +94,7 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
     searchMaxSuggestions: 10, // 搜索结果显示最大数
     lastUpdated: '上次更新', // 开启更新时间，并配置前缀文字   string | boolean (取值为git提交时间)
     docsDir: 'docs', // 编辑的文件夹
-    // docsBranch: 'master', // 编辑的文件所在分支，默认master。 注意：如果你的分支是main则修改为main
+    docsBranch: 'master', // 编辑的文件所在分支，默认master。 注意：如果你的分支是main则修改为main
     editLinks: true, // 启用编辑
     editLinkText: '编辑',
 
@@ -135,7 +128,7 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
     pageButton: true, // 是否显示快捷翻页按钮，默认true
 
     // 默认外观模式（用户未在页面手动修改过模式时才生效，否则以用户设置的模式为准），可选：'auto' | 'light' | 'dark' | 'read'，默认'auto'。
-    // defaultMode: 'auto',
+    defaultMode: 'auto',
 
     // 侧边栏  'structuring' | { mode: 'structuring', collapsable: Boolean} | 'auto' | <自定义>    温馨提示：目录页数据依赖于结构化的侧边栏数据，如果你不设置为'structuring',将无法使用目录页
     sidebar: 'structuring',
@@ -163,13 +156,28 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
           link: 'mailto:wrecking.midnight@gmail.com',
         },
         {
+          iconClass: 'icon-zhihu',
+          title: '知乎',
+          link: 'https://www.zhihu.com/people/draper-crypto',
+        },
+        {
+          iconClass: 'icon-csdn',
+          title: 'CSDN',
+          link: 'https://blog.csdn.net/Suprman88',
+        },
+        {
+          iconClass: 'icon-twitter',
+          title: 'twitter',
+          link: 'https://twitter.com/cryptodraper1',
+        },
+        {
           iconClass: 'icon-github',
           title: 'GitHub',
           link: 'https://github.com/Draper-crypto/',
         },
         {
           iconClass: 'icon-erji',
-          title: '听音乐',
+          title: 'Music',
           link: 'https://music.163.com/#/playlist?id=7578500214',
         },
       ],
@@ -185,7 +193,7 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
     // 扩展自动生成frontmatter。（当md文件的frontmatter不存在相应的字段时将自动添加。不会覆盖已有的数据。）
     extendFrontmatter: {
       author: {
-        name: 'Draper-crypto',
+        name: 'John Tao',
         link: 'https://github.com/Draper-crypto'
       }
     },
@@ -235,16 +243,8 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
             frontUrl: 'https://www.runoob.com/?s=',
           },
           {
-            title: '在Vue API中搜索',
-            frontUrl: 'https://cn.vuejs.org/v2/api/#',
-          },
-          {
             title: '在Bing中搜索',
             frontUrl: 'https://cn.bing.com/search?q=',
-          },
-          {
-            title: '通过百度搜索本站的',
-            frontUrl: `https://www.baidu.com/s?wd=site%3A${DOMAIN_NAME}%20`,
           },
         ],
       }
@@ -314,7 +314,7 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
 
   markdown: {
     lineNumbers: true,
-    extractHeaders: ['h2', 'h3', 'h4', 'h5', 'h6'], // 提取标题到侧边栏的级别，默认['h2', 'h3']
+    extractHeaders: ['h2', 'h3', 'h4', 'h5', 'h6'], // 提取标题到侧边栏的级别，默认['h2'~'h6']
   },
 
   // 监听文件变化并重新构建
