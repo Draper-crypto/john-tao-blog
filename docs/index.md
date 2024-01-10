@@ -2,7 +2,7 @@
 home: true
 # heroImage: /img/web.png
 heroText: John Tao's Blog
-tagline: 登高不傲，居低不怨，保持谦卑
+tagline: Stay Hungry. Stay Foolish.
 # actionText: 立刻进入 →
 # actionLink: /web/
 bannerBg: '/img/bg.jpg'
