@@ -12,11 +12,11 @@ features: # 可选的
   - title: 站长随笔
     details: 深思短句，站长笔下心得之精华
     link: /essay/ # 可选
-    imgUrl: /img/ui.png   # 可选
+    imgUrl: /img/essay.png   # 可选
   - title: 书籍阅读
     details: 书海漫游，汲取智慧的心灵之旅。
     link: /books/
-    imgUrl: /img/other.png
+    imgUrl: /img/book.png
   - title: 信息技术
     details: 科技脉络，信息时代的探索之旅。
     link: /technology/
