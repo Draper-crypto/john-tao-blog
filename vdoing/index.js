@@ -1,3 +1,4 @@
+import { Analytics } from '@vercel/analytics';
 const path = require('path')
 const setFrontmatter = require('./node_utils/setFrontmatter')
 const getSidebarData = require('./node_utils/getSidebarData')
@@ -5,6 +6,8 @@ const { createPage, deletePage } = require('./node_utils/handlePage')
 const chalk = require('chalk') // 命令行打印美化
 const yaml = require('js-yaml') // yaml转js
 const log = console.log
+
+const analytics = new Analytics({ projectId: 'prj_3ooHpq2naVL7QEYg6rxx9NcLuwrX'})
 
 // md容器名
 const CARD_LIST = 'cardList'
