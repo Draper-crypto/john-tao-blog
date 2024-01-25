@@ -7,14 +7,14 @@ import { VdoingThemeConfig } from 'vuepress-theme-vdoing/types'
 // @ts-ignore
 import dayjs from 'dayjs'
 import htmlModules from './config/htmlModules' // 自定义插入的html块
-import { Analytics } from '@vercel/analytics/react';
 
 
 const DOMAIN_NAME = 'www.draper-crypto.top' // 域名 (不带https)
 const WEB_SITE = `https://${DOMAIN_NAME}` // 网址
 
 export default defineConfig4CustomTheme<VdoingThemeConfig>({
-  theme: 'vdoing', // 使用npm主题包
+  //theme: 'vdoing', // 使用npm主题包
+  theme: resolve(__dirname, '../../vdoing'), // 使用本地主题包
 
   locales: {
     '/': {
