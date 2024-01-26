@@ -63,6 +63,7 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
           { text: '报错解决', link: '/error/er0001/' },
           { text: '代码编写', link: '/code/co0001/' },
           { text: '人工智能', link: '/ai/ai0001/' },
+          { text: '与AI同行', link: '/gpt/gpt0001' },
         ],
       },
       {
