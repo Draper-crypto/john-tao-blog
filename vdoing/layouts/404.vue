@@ -25,7 +25,7 @@ export default {
   display flex
   align-items center
   justify-content center
-  background-image linear-gradient(135deg, #667eea 0%, #764ba2 100%)
+  background-image linear-gradient(135deg, #17ead9, #6078ea)
 
 .theme-vdoing-content
   max-width 600px
@@ -34,6 +34,7 @@ export default {
   text-align center
   background-color rgba(255, 255, 255, 0.9)
   box-shadow 0 4px 8px rgba(0, 0, 0, 0.1)
+  border-radius 10px  // 添加的圆角效果
 
 .error-code
   font-size 8rem
